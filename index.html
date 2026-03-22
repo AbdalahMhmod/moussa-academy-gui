@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Moussa Courses</title>
+    <meta name="description" content="@ViewBag.Title">
+    <meta name="author" content="IT-Moussa">
+
+    <link rel="shortcut icon" href="assets/images/gifs/graduate.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="assets/styles.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Top Offer -->
+    <div class="top-offer" id="top__nav">
+        <div class="container">
+            <div class="top-offer__container">
+                <div class="top-offer__logo">
+                    <img src="assets/images/gifs/book.gif" alt="">
+                </div>
+                <div class="top-offer__message">
+                    سارع واستفيد من عروض موسى اكاديمي المميزة
+                    <a href="#" class="top-offer__btn">
+                        اضغط هنا 👍
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="main-nav" id="mainNav">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center gap-3">
+                <a href="#" class="navbar-brand text-white">
+                    <img style="width: 50px;" src="assets/images/gifs/mortarboard.gif" />
+                </a>
+                <a href="#">عن الاكاديمية</a>
+                <a href="#">المقررات</a>
+                <a href="#">الجامعات</a>
+                <a href="#">الأساتذة</a>
+                <a href="#">المكتبة</a>
+                <a href="#">تواصل معنا</a>
+            </div>
+
+            <div class="d-flex align-items-center gap-2">
+                <!-- Dropdown Button -->
+                <div class="dropdown">
+                    <button
+                        class="btn btn-outline-primary dropdown-toggle d-flex align-items-center justify-content-center"
+                        type="button" id="flagDropdown" data-bs-toggle="dropdown" style="border-radius: 15px;">
+                        <img id="currentFlag" src="assets/images/flags/4x3/sa.svg" style="width: 30px;">
+                    </button>
+                    <ul class="dropdown-menu text-center" id="flagMenu">
+                        <li><a class="dropdown-item flag-item" href="#" data-flag="assets/images/flags/4x3/sa.svg"><img
+                                    src="assets/images/flags/4x3/sa.svg" style="width: 30px;"></a></li>
+                        <li><a class="dropdown-item flag-item" href="#" data-flag="assets/images/flags/4x3/eg.svg"><img
+                                    src="assets/images/flags/4x3/eg.svg" style="width: 30px;"></a></li>
+                        <li><a class="dropdown-item flag-item" href="#" data-flag="assets/images/flags/4x3/ae.svg"><img
+                                    src="assets/images/flags/4x3/ae.svg" style="width: 30px;"></a></li>
+                    </ul>
+                </div>
+
+                <!-- Register Button -->
+                <button href="#" style="color: aliceblue; border-radius: 15px;" class="btn btn-primary">تسجيل</button>
+
+                <!-- Login Button -->
+                <button href="#" style="border-radius: 15px;" class="btn btn-outline-primary">دخول</button>
+
+                <!-- Search Icon -->
+                <button class="btn btn-outline-warning" style="border: none; border-radius: 50%;">
+                    <i class="bi bi-search"></i>
+                </button>
+
+                <!-- Cart Icon -->
+                <button class="btn btn-outline-warning" style="border: none; border-radius: 50%;">
+                    <i class="bi bi-cart"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <nav class="main-nav" id="secondNav">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="navbar-brand text-white"><img style="width: 50px;"
+                    src="assets/images/gifs/mortarboard.gif" /></a>
+            <div>
+                <a style="font-size: xx-large; color: gray;" href="#"><i class="bi bi-list"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <div class="container">
+            <div class="section py-5">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="video-box position-relative">
+
+                            <img src="assets/images/gifs/teacher.gif" class="img-fluid rounded" id="videoPreview">
+
+                            <button class="play-btn" id="playVideo">
+                                <i class="bi bi-play-fill"></i>
+                            </button>
+
+                            <div class="video-frame d-none" id="videoFrame">
+                                <iframe id="videoFrameHolder" width="100%" height="350"
+                                    src="https://www.youtube.com/embed/FToT_a0ZIaE" title="YouTube video player"
+                                    frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+
+                        <h2 class="mb-3 fw-bold">
+                            مرحباً بك في أكاديمية موسى للتعلم عن بعد
+                        </h2>
+
+                        <p class="text-muted mb-4">
+                            منصة موسى التعليمية هي منصة متخصصة في تقديم المواد الأكاديمية والمحاضرات
+                            الجامعية بطريقة احترافية وسهلة الوصول للطلاب. نسعى إلى توفير محتوى
+                            تعليمي عالي الجودة يساعد الطلاب على التفوق الدراسي وتنمية مهاراتهم
+                            العلمية من خلال أفضل الأساتذة والجامعات.
+                        </p>
+
+                        <form id="universityForm">
+
+                            <div class="row g-2">
+
+                                <div class="col-md-8 col-12">
+                                    <select class="form-select form-select-lg w-100" id="universitySelect" required>
+
+                                        <option value="" selected disabled>
+                                            اختر الجامعة
+                                        </option>
+
+                                        <option value="cairo-university.html">
+                                            جامعة القاهرة
+                                        </option>
+
+                                        <option value="ainshams-university.html">
+                                            جامعة عين شمس
+                                        </option>
+
+                                        <option value="ksu-university.html">
+                                            جامعة الملك سعود
+                                        </option>
+
+                                        <option value="uae-university.html">
+                                            جامعة الإمارات
+                                        </option>
+
+                                        <option value="cairo-university.html">
+                                            جامعة القاهرة
+                                        </option>
+
+                                        <option value="ainshams-university.html">
+                                            جامعة عين شمس
+                                        </option>
+
+                                        <option value="ksu-university.html">
+                                            جامعة الملك سعود
+                                        </option>
+
+                                        <option value="uae-university.html">
+                                            جامعة الإمارات
+                                        </option>
+
+                                        <option value="cairo-university.html">
+                                            جامعة القاهرة
+                                        </option>
+
+                                        <option value="ainshams-university.html">
+                                            جامعة عين شمس
+                                        </option>
+
+                                        <option value="ksu-university.html">
+                                            جامعة الملك سعود
+                                        </option>
+
+                                        <option value="uae-university.html">
+                                            جامعة الإمارات
+                                        </option>
+
+                                        <option value="cairo-university.html">
+                                            جامعة القاهرة
+                                        </option>
+
+                                        <option value="ainshams-university.html">
+                                            جامعة عين شمس
+                                        </option>
+
+                                        <option value="ksu-university.html">
+                                            جامعة الملك سعود
+                                        </option>
+
+                                        <option value="uae-university.html">
+                                            جامعة الإمارات
+                                        </option>
+
+                                        <option value="cairo-university.html">
+                                            جامعة القاهرة
+                                        </option>
+
+                                        <option value="ainshams-university.html">
+                                            جامعة عين شمس
+                                        </option>
+
+                                        <option value="ksu-university.html">
+                                            جامعة الملك سعود
+                                        </option>
+
+                                        <option value="uae-university.html">
+                                            جامعة الإمارات
+                                        </option>
+
+                                    </select>
+                                </div>
+
+                                <div class="col-md-4 col-12">
+                                    <button type="submit" class="btn btn-primary w-100 h-100">
+                                        عرض المقررات
+                                    </button>
+                                </div>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container gry-bg">
+            <div class="section">
+                <div class="row align-items-center mb-4">
+                    <h1>المقررات <span>الجامعية</span></h1>
+                    <p>يمكنك التواصل مع الادارة في حال اردت مقرر جديد للتواصل <a href="#">اضغط هنا</a></p>
+                </div>
+                <div class="row align-items-center mt-3 mb-4">
+                    <div class="col-lg-4 col-12 mb-2 mb-lg-0 position-relative">
+                        <select class="form-select form-select-lg w-100" id="universitySelect" required>
+                            <option value="" selected disabled>اختر الجامعة</option>
+                            <option value="cairo-university.html">جامعة القاهرة</option>
+                            <option value="ainshams-university.html">جامعة عين شمس</option>
+                            <option value="ksu-university.html">جامعة الملك سعود</option>
+                            <option value="uae-university.html">جامعة الإمارات</option>
+                        </select>
+                        <i class="bi bi-buildings select-icon"></i>
+                    </div>
+                    <div class="col-lg-8 col-12 text-lg-end">
+                        <a class="btn btn-outline-warning" href="#">جميع المقررات</a>
+                    </div>
+                </div>
+
+                <div class="row align-items-center position-relative slider-wrapper">
+                    <a class="right-arrow">
+                        <i class="bi bi-arrow-right-circle"></i>
+                    </a>
+
+                    <div class="slider-container">
+                        <div class="slider-track">
+
+                            <div class="course course-card">
+                                <div class="card-head position-relative">
+                                    <img src="assets/images/university/cs.jpg" class="img-fluid rounded w-100"
+                                        style="height:213px;object-fit:cover;">
+                                    <div class="head-overlay d-flex justify-content-center align-items-center">
+                                        <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                        <a href="#" class="detail-icon"><img
+                                                src="assets/images/university/youtube.png"></a>
+                                    </div>
+                                </div>
+                                <div class="card-center mt-2">
+                                    <div class="title">
+                                        <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                            preserveAspectRatio="none">
+                                            <path
+                                                d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-content mt-2">
+                                    <div class="course-details d-flex flex-column gap-2">
+                                        <div class="detail teacher-name">
+                                            <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                                رائد توفيق</a>
+                                        </div>
+                                        <div class="detail college">
+                                            <img class="card-img" src="assets/images/gifs/online-learning.gif"><a
+                                                href="#">جامعة الإمام
+                                                || كلية الحاسب</a>
+                                        </div>
+                                        <div class="detail lectures-count">
+                                            <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                                محاضرة</span>
+                                        </div>
+                                        <div class="detail telegram-link">
+                                            <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                                مجموعة التليقرام</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                        <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                        <div class="price d-flex align-items-center gap-2">
+                                            <span class="discount-price">350 ⃁</span>
+                                            <span class="price-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course course-card">
+                                <div class="card-head position-relative">
+                                    <img src="assets/images/university/cs.jpg" class="img-fluid rounded w-100"
+                                        style="height:213px;object-fit:cover;">
+                                    <div class="head-overlay d-flex justify-content-center align-items-center">
+                                        <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                        <a href="#" class="detail-icon"><img
+                                                src="assets/images/university/youtube.png"></a>
+                                    </div>
+                                </div>
+                                <div class="card-center mt-2">
+                                    <div class="title">
+                                        <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                            preserveAspectRatio="none">
+                                            <path
+                                                d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-content mt-2">
+                                    <div class="course-details d-flex flex-column gap-2">
+                                        <div class="detail teacher-name">
+                                            <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                                رائد توفيق</a>
+                                        </div>
+                                        <div class="detail college">
+                                            <img class="card-img" src="assets/images/gifs/online-learning.gif"><a
+                                                href="#">جامعة الإمام
+                                                || كلية الحاسب</a>
+                                        </div>
+                                        <div class="detail lectures-count">
+                                            <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                                محاضرة</span>
+                                        </div>
+                                        <div class="detail telegram-link">
+                                            <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                                مجموعة التليقرام</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                        <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                        <div class="price d-flex align-items-center gap-2">
+                                            <span class="discount-price">350 ⃁</span>
+                                            <span class="price-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course course-card">
+                                <div class="card-head position-relative">
+                                    <img src="assets/images/university/cs.jpg" class="img-fluid rounded w-100"
+                                        style="height:213px;object-fit:cover;">
+                                    <div class="head-overlay d-flex justify-content-center align-items-center">
+                                        <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                        <a href="#" class="detail-icon"><img
+                                                src="assets/images/university/youtube.png"></a>
+                                    </div>
+                                </div>
+                                <div class="card-center mt-2">
+                                    <div class="title">
+                                        <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                            preserveAspectRatio="none">
+                                            <path
+                                                d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-content mt-2">
+                                    <div class="course-details d-flex flex-column gap-2">
+                                        <div class="detail teacher-name">
+                                            <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                                رائد توفيق</a>
+                                        </div>
+                                        <div class="detail college">
+                                            <img class="card-img" src="assets/images/gifs/online-learning.gif"><a
+                                                href="#">جامعة الإمام
+                                                || كلية الحاسب</a>
+                                        </div>
+                                        <div class="detail lectures-count">
+                                            <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                                محاضرة</span>
+                                        </div>
+                                        <div class="detail telegram-link">
+                                            <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                                مجموعة التليقرام</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                        <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                        <div class="price d-flex align-items-center gap-2">
+                                            <span class="discount-price">350 ⃁</span>
+                                            <span class="price-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course course-card">
+                                <div class="card-head position-relative">
+                                    <img src="assets/images/university/cs.jpg" class="img-fluid rounded w-100"
+                                        style="height:213px;object-fit:cover;">
+                                    <div class="head-overlay d-flex justify-content-center align-items-center">
+                                        <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                        <a href="#" class="detail-icon"><img
+                                                src="assets/images/university/youtube.png"></a>
+                                    </div>
+                                </div>
+                                <div class="card-center mt-2">
+                                    <div class="title">
+                                        <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                            preserveAspectRatio="none">
+                                            <path
+                                                d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-content mt-2">
+                                    <div class="course-details d-flex flex-column gap-2">
+                                        <div class="detail teacher-name">
+                                            <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                                رائد توفيق</a>
+                                        </div>
+                                        <div class="detail college">
+                                            <img class="card-img" src="assets/images/gifs/online-learning.gif"><a
+                                                href="#">جامعة الإمام
+                                                || كلية الحاسب</a>
+                                        </div>
+                                        <div class="detail lectures-count">
+                                            <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                                محاضرة</span>
+                                        </div>
+                                        <div class="detail telegram-link">
+                                            <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                                مجموعة التليقرام</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                        <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                        <div class="price d-flex align-items-center gap-2">
+                                            <span class="discount-price">350 ⃁</span>
+                                            <span class="price-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course course-card">
+                                <div class="card-head position-relative">
+                                    <img src="assets/images/university/cs.jpg" class="img-fluid rounded w-100"
+                                        style="height:213px;object-fit:cover;">
+                                    <div class="head-overlay d-flex justify-content-center align-items-center">
+                                        <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                        <a href="#" class="detail-icon"><img
+                                                src="assets/images/university/youtube.png"></a>
+                                    </div>
+                                </div>
+                                <div class="card-center mt-2">
+                                    <div class="title">
+                                        <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                            preserveAspectRatio="none">
+                                            <path
+                                                d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-content mt-2">
+                                    <div class="course-details d-flex flex-column gap-2">
+                                        <div class="detail teacher-name">
+                                            <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                                رائد توفيق</a>
+                                        </div>
+                                        <div class="detail college">
+                                            <img class="card-img" src="assets/images/gifs/online-learning.gif"><a
+                                                href="#">جامعة الإمام
+                                                || كلية الحاسب</a>
+                                        </div>
+                                        <div class="detail lectures-count">
+                                            <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                                محاضرة</span>
+                                        </div>
+                                        <div class="detail telegram-link">
+                                            <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                                مجموعة التليقرام</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                        <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                        <div class="price d-flex align-items-center gap-2">
+                                            <span class="discount-price">350 ⃁</span>
+                                            <span class="price-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course course-card">
+                                <div class="card-head position-relative">
+                                    <img src="assets/images/university/cs.jpg" class="img-fluid rounded w-100"
+                                        style="height:213px;object-fit:cover;">
+                                    <div class="head-overlay d-flex justify-content-center align-items-center">
+                                        <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                        <a href="#" class="detail-icon"><img
+                                                src="assets/images/university/youtube.png"></a>
+                                    </div>
+                                </div>
+                                <div class="card-center mt-2">
+                                    <div class="title">
+                                        <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                            preserveAspectRatio="none">
+                                            <path
+                                                d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-content mt-2">
+                                    <div class="course-details d-flex flex-column gap-2">
+                                        <div class="detail teacher-name">
+                                            <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                                رائد توفيق</a>
+                                        </div>
+                                        <div class="detail college">
+                                            <img class="card-img" src="assets/images/gifs/online-learning.gif"><a
+                                                href="#">جامعة الإمام
+                                                || كلية الحاسب</a>
+                                        </div>
+                                        <div class="detail lectures-count">
+                                            <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                                محاضرة</span>
+                                        </div>
+                                        <div class="detail telegram-link">
+                                            <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                                مجموعة التليقرام</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                        <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                        <div class="price d-flex align-items-center gap-2">
+                                            <span class="discount-price">350 ⃁</span>
+                                            <span class="price-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course course-card">
+                                <div class="card-head position-relative">
+                                    <img src="assets/images/university/cs.jpg" class="img-fluid rounded w-100"
+                                        style="height:213px;object-fit:cover;">
+                                    <div class="head-overlay d-flex justify-content-center align-items-center">
+                                        <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                        <a href="#" class="detail-icon"><img
+                                                src="assets/images/university/youtube.png"></a>
+                                    </div>
+                                </div>
+                                <div class="card-center mt-2">
+                                    <div class="title">
+                                        <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                            preserveAspectRatio="none">
+                                            <path
+                                                d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-content mt-2">
+                                    <div class="course-details d-flex flex-column gap-2">
+                                        <div class="detail teacher-name">
+                                            <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                                رائد توفيق</a>
+                                        </div>
+                                        <div class="detail college">
+                                            <img class="card-img" src="assets/images/gifs/online-learning.gif"><a
+                                                href="#">جامعة الإمام
+                                                || كلية الحاسب</a>
+                                        </div>
+                                        <div class="detail lectures-count">
+                                            <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                                محاضرة</span>
+                                        </div>
+                                        <div class="detail telegram-link">
+                                            <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                                مجموعة التليقرام</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                        <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                        <div class="price d-flex align-items-center gap-2">
+                                            <span class="discount-price">350 ⃁</span>
+                                            <span class="price-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course course-card">
+                                <div class="card-head position-relative">
+                                    <img src="assets/images/university/cs.jpg" class="img-fluid rounded w-100"
+                                        style="height:213px;object-fit:cover;">
+                                    <div class="head-overlay d-flex justify-content-center align-items-center">
+                                        <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                        <a href="#" class="detail-icon"><img
+                                                src="assets/images/university/youtube.png"></a>
+                                    </div>
+                                </div>
+                                <div class="card-center mt-2">
+                                    <div class="title">
+                                        <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                            preserveAspectRatio="none">
+                                            <path
+                                                d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-content mt-2">
+                                    <div class="course-details d-flex flex-column gap-2">
+                                        <div class="detail teacher-name">
+                                            <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                                رائد توفيق</a>
+                                        </div>
+                                        <div class="detail college">
+                                            <img class="card-img" src="assets/images/gifs/online-learning.gif"><a
+                                                href="#">جامعة الإمام
+                                                || كلية الحاسب</a>
+                                        </div>
+                                        <div class="detail lectures-count">
+                                            <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                                محاضرة</span>
+                                        </div>
+                                        <div class="detail telegram-link">
+                                            <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                                مجموعة التليقرام</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                        <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                        <div class="price d-flex align-items-center gap-2">
+                                            <span class="discount-price">350 ⃁</span>
+                                            <span class="price-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course course-card">
+                                <div class="card-head position-relative">
+                                    <img src="assets/images/university/cs.jpg" class="img-fluid rounded w-100"
+                                        style="height:213px;object-fit:cover;">
+                                    <div class="head-overlay d-flex justify-content-center align-items-center">
+                                        <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                        <a href="#" class="detail-icon"><img
+                                                src="assets/images/university/youtube.png"></a>
+                                    </div>
+                                </div>
+                                <div class="card-center mt-2">
+                                    <div class="title">
+                                        <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                            preserveAspectRatio="none">
+                                            <path
+                                                d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-content mt-2">
+                                    <div class="course-details d-flex flex-column gap-2">
+                                        <div class="detail teacher-name">
+                                            <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                                رائد توفيق</a>
+                                        </div>
+                                        <div class="detail college">
+                                            <img class="card-img" src="assets/images/gifs/online-learning.gif"><a
+                                                href="#">جامعة الإمام
+                                                || كلية الحاسب</a>
+                                        </div>
+                                        <div class="detail lectures-count">
+                                            <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                                محاضرة</span>
+                                        </div>
+                                        <div class="detail telegram-link">
+                                            <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                                مجموعة التليقرام</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                        <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                        <div class="price d-flex align-items-center gap-2">
+                                            <span class="discount-price">350 ⃁</span>
+                                            <span class="price-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course course-card">
+                                <div class="card-head position-relative">
+                                    <img src="assets/images/university/cs.jpg" class="img-fluid rounded w-100"
+                                        style="height:213px;object-fit:cover;">
+                                    <div class="head-overlay d-flex justify-content-center align-items-center">
+                                        <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                        <a href="#" class="detail-icon"><img
+                                                src="assets/images/university/youtube.png"></a>
+                                    </div>
+                                </div>
+                                <div class="card-center mt-2">
+                                    <div class="title">
+                                        <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                            preserveAspectRatio="none">
+                                            <path
+                                                d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-content mt-2">
+                                    <div class="course-details d-flex flex-column gap-2">
+                                        <div class="detail teacher-name">
+                                            <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                                رائد توفيق</a>
+                                        </div>
+                                        <div class="detail college">
+                                            <img class="card-img" src="assets/images/gifs/online-learning.gif"><a
+                                                href="#">جامعة الإمام
+                                                || كلية الحاسب</a>
+                                        </div>
+                                        <div class="detail lectures-count">
+                                            <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                                محاضرة</span>
+                                        </div>
+                                        <div class="detail telegram-link">
+                                            <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                                مجموعة التليقرام</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                        <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                        <div class="price d-flex align-items-center gap-2">
+                                            <span class="discount-price">350 ⃁</span>
+                                            <span class="price-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course course-card">
+                                <div class="card-head position-relative">
+                                    <img src="assets/images/university/cs.jpg" class="img-fluid rounded w-100"
+                                        style="height:213px;object-fit:cover;">
+                                    <div class="head-overlay d-flex justify-content-center align-items-center">
+                                        <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                        <a href="#" class="detail-icon"><img
+                                                src="assets/images/university/youtube.png"></a>
+                                    </div>
+                                </div>
+                                <div class="card-center mt-2">
+                                    <div class="title">
+                                        <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                            preserveAspectRatio="none">
+                                            <path
+                                                d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-content mt-2">
+                                    <div class="course-details d-flex flex-column gap-2">
+                                        <div class="detail teacher-name">
+                                            <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                                رائد توفيق</a>
+                                        </div>
+                                        <div class="detail college">
+                                            <img class="card-img" src="assets/images/gifs/online-learning.gif"><a
+                                                href="#">جامعة الإمام
+                                                || كلية الحاسب</a>
+                                        </div>
+                                        <div class="detail lectures-count">
+                                            <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                                محاضرة</span>
+                                        </div>
+                                        <div class="detail telegram-link">
+                                            <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                                مجموعة التليقرام</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                        <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                        <div class="price d-flex align-items-center gap-2">
+                                            <span class="discount-price">350 ⃁</span>
+                                            <span class="price-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course course-card">
+                                <div class="card-head position-relative">
+                                    <img src="assets/images/university/cs.jpg" class="img-fluid rounded w-100"
+                                        style="height:213px;object-fit:cover;">
+                                    <div class="head-overlay d-flex justify-content-center align-items-center">
+                                        <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                        <a href="#" class="detail-icon"><img
+                                                src="assets/images/university/youtube.png"></a>
+                                    </div>
+                                </div>
+                                <div class="card-center mt-2">
+                                    <div class="title">
+                                        <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                            preserveAspectRatio="none">
+                                            <path
+                                                d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-content mt-2">
+                                    <div class="course-details d-flex flex-column gap-2">
+                                        <div class="detail teacher-name">
+                                            <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                                رائد توفيق</a>
+                                        </div>
+                                        <div class="detail college">
+                                            <img class="card-img" src="assets/images/gifs/online-learning.gif"><a
+                                                href="#">جامعة الإمام
+                                                || كلية الحاسب</a>
+                                        </div>
+                                        <div class="detail lectures-count">
+                                            <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                                محاضرة</span>
+                                        </div>
+                                        <div class="detail telegram-link">
+                                            <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                                مجموعة التليقرام</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                        <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                        <div class="price d-flex align-items-center gap-2">
+                                            <span class="discount-price">350 ⃁</span>
+                                            <span class="price-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="course course-card">
+                                <div class="card-head position-relative">
+                                    <img src="assets/images/university/cs.jpg" class="img-fluid rounded w-100"
+                                        style="height:213px;object-fit:cover;">
+                                    <div class="head-overlay d-flex justify-content-center align-items-center">
+                                        <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                        <a href="#" class="detail-icon"><img
+                                                src="assets/images/university/youtube.png"></a>
+                                    </div>
+                                </div>
+                                <div class="card-center mt-2">
+                                    <div class="title">
+                                        <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                            preserveAspectRatio="none">
+                                            <path
+                                                d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                        </svg>
+                                    </div>
+                                </div>
+                                <div class="card-content mt-2">
+                                    <div class="course-details d-flex flex-column gap-2">
+                                        <div class="detail teacher-name">
+                                            <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                                رائد توفيق</a>
+                                        </div>
+                                        <div class="detail college">
+                                            <img class="card-img" src="assets/images/gifs/online-learning.gif"><a
+                                                href="#">جامعة الإمام
+                                                || كلية الحاسب</a>
+                                        </div>
+                                        <div class="detail lectures-count">
+                                            <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                                محاضرة</span>
+                                        </div>
+                                        <div class="detail telegram-link">
+                                            <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                                مجموعة التليقرام</a>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                        <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                        <div class="price d-flex align-items-center gap-2">
+                                            <span class="discount-price">350 ⃁</span>
+                                            <span class="price-dot"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <a class="left-arrow">
+                        <i class="bi bi-arrow-left-circle"></i>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container university-section">
+
+            <div class="section section-header text-center mb-4">
+                <h1>إختر جامعتك و <span>ابدأ الآن</span></h1>
+                <p>جميع الجامعات</p>
+            </div>
+
+            <div class="university-slider">
+
+                <button class="uni-arrow prev">
+                    <i class="bi bi-arrow-right-circle"></i>
+                </button>
+
+                <div class="uni-slider-container">
+                    <div class="uni-slider-track">
+
+                        <!-- card -->
+                        <div class="uni-card">
+                            <img src="assets/images/university/cs.jpg">
+                            <h5>جامعة القاهرة</h5>
+                        </div>
+
+                        <div class="uni-card">
+                            <img src="assets/images/university/02.jpg">
+                            <h5>جامعة عين شمس</h5>
+                        </div>
+
+                        <div class="uni-card">
+                            <img src="assets/images/university/03.jpg">
+                            <h5>جامعة الإسكندرية</h5>
+                        </div>
+
+                        <div class="uni-card">
+                            <img src="assets/images/university/04.jpg">
+                            <h5>جامعة الملك سعود</h5>
+                        </div>
+
+                        <div class="uni-card">
+                            <img src="assets/images/university/02.jpg">
+                            <h5>جامعة الإمارات</h5>
+                        </div>
+
+                        <div class="uni-card">
+                            <img src="assets/images/university/01.jpg">
+                            <h5>جامعة القاهرة</h5>
+                        </div>
+
+                        <div class="uni-card">
+                            <img src="assets/images/university/02.jpg">
+                            <h5>جامعة عين شمس</h5>
+                        </div>
+
+                        <div class="uni-card">
+                            <img src="assets/images/university/03.jpg">
+                            <h5>جامعة الإسكندرية</h5>
+                        </div>
+
+                        <div class="uni-card">
+                            <img src="assets/images/university/04.jpg">
+                            <h5>جامعة الملك سعود</h5>
+                        </div>
+
+                        <div class="uni-card">
+                            <img src="assets/images/university/02.jpg">
+                            <h5>جامعة الإمارات</h5>
+                        </div>
+
+                        <div class="uni-card">
+                            <img src="assets/images/university/01.jpg">
+                            <h5>جامعة القاهرة</h5>
+                        </div>
+
+                        <div class="uni-card">
+                            <img src="assets/images/university/02.jpg">
+                            <h5>جامعة عين شمس</h5>
+                        </div>
+
+                        <div class="uni-card">
+                            <img src="assets/images/university/03.jpg">
+                            <h5>جامعة الإسكندرية</h5>
+                        </div>
+
+                        <div class="uni-card">
+                            <img src="assets/images/university/04.jpg">
+                            <h5>جامعة الملك سعود</h5>
+                        </div>
+
+                        <div class="uni-card">
+                            <img src="assets/images/university/02.jpg">
+                            <h5>جامعة الإمارات</h5>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="uni-arrow next">
+                    <i class="bi bi-arrow-left-circle"></i>
+                </button>
+
+            </div>
+
+            <div class="uni-dots"></div>
+
+        </div>
+
+        <div class="container gry-bg">
+            <div class="section section-header text-center mb-4">
+                <h1>معلمين ومعلمات <span>اكاديمية موسى </span></h1>
+                <p>الكفاءة والخبرة و ذوو الشهادات العليا</p>
+            </div>
+            <div class="instructor-slider">
+
+                <div class="instructor-track">
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+                    <a href="/instructor-details.html" class="inst-link">
+                        <div class="inst-card">
+                            <div class="inst-img">
+                                <img src="assets/images/gifs/change.gif">
+                            </div>
+                            <h4>Mr. Evan Mark</h4>
+                            <p>Instructor</p>
+                        </div>
+                    </a>
+
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container">
+
+            <!-- Header Section -->
+            <div class="section section-header text-center mb-5">
+                <h1>لماذا تختار <span>اكاديمية موسى ؟</span></h1>
+                <p>تعلم وانت فى البيت بأقل الأسعار وفي أي وقت</p>
+            </div>
+
+            <div class="row align-items-center">
+
+                <!-- Image -->
+                <div class="col-lg-6 mb-4 mb-lg-0 order-1 order-lg-1">
+                    <div class="why-image">
+                        <img style="max-width: 100%;" src="assets/images/instructor/lecture.png" alt="lecture">
+                    </div>
+                </div>
+
+                <!-- Features Content -->
+                <div class="col-lg-6 order-2 order-lg-2">
+                    <div class="why-features">
+
+                        <div class="why-item">
+                            <div class="icon"><i class="bi bi-cash-stack"></i></div>
+                            <div class="text">
+                                <h5>استعادة مبلغ الاشتراك</h5>
+                                <p>إمكانية الدفع بالأقساط وأيضا استرداد مبلغ الاشتراك خلال ٤٨ ساعه من وقت الاشتراك</p>
+                            </div>
+                        </div>
+
+                        <div class="why-item">
+                            <div class="icon"><i class="bi bi-journal-check"></i></div>
+                            <div class="text">
+                                <h5>الاسايمنت والمشاريع</h5>
+                                <p>المساعدة في حل و توضيح الواجبات والمشاريع الجامعية</p>
+                            </div>
+                        </div>
+
+                        <div class="why-item">
+                            <div class="icon"><i class="bi bi-patch-check"></i></div>
+                            <div class="text">
+                                <h5>معلمات ومعلمين موثوقين</h5>
+                                <p>جميع معلماتنا ومعلمينا تم اختبارهم و فحص مؤهلاتهم والتحقق منها</p>
+                            </div>
+                        </div>
+
+                        <div class="why-item">
+                            <div class="icon"><i class="bi bi-play-circle"></i></div>
+                            <div class="text">
+                                <h5>دروس مسجلة بالكامل</h5>
+                                <p>جميع الدروس مسجلة وبامكانك الرجوع لها في أي وقت</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="container gry-bg">
+            <!-- Header -->
+            <div class="section section-header text-center mb-4">
+                <h1>كيفية التعلم مع <span>اكاديمية موسى ؟</span></h1>
+                <p>أربع خطوات فقط</p>
+            </div>
+
+            <!-- Steps Row -->
+            <div class="row g-3 justify-content-center">
+                <!-- Step 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <img src="assets/images/how/register.png" alt="Step 1" class="step-img">
+                        <h5 class="step-title">سجل فى الموقع</h5>
+                        <p class="step-text">يمكنك التسجيل بكل سهوله<br /> من خلال صفحة التسجيل</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <img src="assets/images/how/machine-learning.png" alt="Step 2" class="step-img">
+                        <h5 class="step-title">إشترك فى الكورس</h5>
+                        <p class="step-text">يمكنك اختيار الكورس حسب<br /> اختيار الجامعة او مدرسك المفضل</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <img src="assets/images/how/payment-method.png" alt="Step 3" class="step-img">
+                        <h5 class="step-title">إدفع أو حـول المبلغ</h5>
+                        <p class="step-text">ادخل بيانات الايصال والاشتراك <br />في صفحة تثبيت الاشتراك</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <img src="assets/images/how/video.png" alt="Step 4" class="step-img">
+                        <h5 class="step-title">أحصل على مواد الكورس</h5>
+                        <p class="step-text">بعد الاشتراك يظهر الكورس في <br />صفحة كورساتي ومتابعة الدروس</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Students Reviews ===== -->
+        <div class="container">
+            <div class="section">
+                <div class="section-header text-center mb-4">
+                    <h1>آراء الطلاب في <span>أكاديمية موسى</span></h1>
+                    <p>أكثر من 30,000 طالب وطالبة</p>
+                </div>
+
+                <div class="coming-soon">
+                    <p>🚧 هذا القسم قيد التطوير وسيتم إطلاقه قريبًا</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ===== Statistics ===== -->
+        <div class="container gry-bg">
+            <div class="section">
+                <div class="section-header text-center mb-4">
+                    <h1>حقائق رقمية</h1>
+                    <p>أرقام تعكس نجاح أكاديمية موسى</p>
+                </div>
+
+                <div class="coming-soon">
+                    <p>📊 سيتم إضافة الإحصائيات قريبًا</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ===== App Section ===== -->
+        <div class="container">
+            <div class="section">
+                <div class="section-header text-center mb-4">
+                    <h1>حمّل تطبيق <span>أكاديمية موسى</span></h1>
+                    <p>يمكنك الآن تحميل التطبيق على هاتفك بسهولة</p>
+                </div>
+
+                <div class="coming-soon">
+                    <p>📱 التطبيق قريبًا على Google Play و App Store</p>
+                </div>
+            </div>
+
+            <p class="faq-text text-center mt-4">
+                هل ما زال لديك استفسارات حول التعلم مع أكاديمية موسى؟
+            </p>
+        </div>
+
+
+        <!-- <div class="container">
+            <div class="section">
+                <a id="mobile_list" style="font-size: xx-large; color: gray;" href="#"><i class="bi bi-list"></i></a>
+                <img src="assets/images/flags/4x3/sa.svg" style="width: 50px;" />
+            </div>
+        </div> -->
+
+    </div>
+
+    <a id="floating_btn" class="floating-btn">
+        <img src="assets/images/gifs/speech-bubble.gif" alt="تواصل معنا" />
+    </a>
+    <a href="#" id="floating_w_btn" class="floating-w-btn">
+        <img src="assets/images/gifs/whatsapp.png" alt="تواصل معنا" />
+    </a>
+    <a href="#" id="floating_t_btn" class="floating-t-btn">
+        <img src="assets/images/gifs/round.png" alt="تواصل معنا" />
+    </a>
+
+    <footer class="main-footer">
+
+        <div class="container">
+            <div class="row g-4 align-items-start">
+
+                <!-- ===== Right: Info ===== -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-box">
+
+                        <img src="assets/images/gifs/mortarboard.gif" class="footer-logo">
+
+                        <h5>موسى أكاديمي</h5>
+
+                        <p>
+                            منصة تعليمية إلكترونية تهتم بتقديم وتوفير مواد دراسية أكاديمية ومحاضرات
+                        </p>
+
+                        <div class="footer-contact">
+                            <p>support@ajdur.com</p>
+                            <p>+966 559322764</p>
+                        </div>
+
+                        <div class="footer-tax">
+                            <span>السجل الضريبي: 310453494800003</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ===== Middle: Links ===== -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-links">
+
+                        <h5>روابط مهمة</h5>
+
+                        <div class="links-grid">
+
+                            <ul>
+                                <li>عن موسى أكاديمي</li>
+                                <li>المقررات</li>
+                                <li>الجامعات</li>
+                                <li>الأساتذة</li>
+                            </ul>
+
+                            <ul>
+                                <li>المكتبة</li>
+                                <li>البحث</li>
+                                <li>الفريق العامل</li>
+                                <li>تسجيل جديد</li>
+                                <li>تسجيل الدخول</li>
+                            </ul>
+
+                            <ul>
+                                <li>طرق السداد</li>
+                                <li>الأسئلة الشائعة</li>
+                                <li>شروط الاستخدام</li>
+                                <li>كن محاضراً</li>
+                                <li>تواصل معنا</li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ===== Left: Maroof ===== -->
+                <div class="col-lg-4 col-md-12 text-center">
+                    <div class="footer-maroof">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100"
+                            height="45" viewBox="0 0 100 45">
+                            <defs>
+                                <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%"
+                                    viewBox="0 0 252 111">
+                                    <image width="252" height="111"
+                                        xlink:href="data:image/png;base64,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">
+                                    </image>
+                                </pattern>
+                            </defs>
+                            <rect id="maroof" width="100" height="45" fill="url(#pattern)"></rect>
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-partners-section">
+            <div class="container">
+                <div class="row align-items-center">
+
+                    <!-- ===== Text ===== -->
+                    <div class="col-lg-4 text-col">
+                        <h5>المساهمة المجتمعية</h5>
+                        <p>شراكات منصة موسى أكاديمي مع نوادي جامعية</p>
+                    </div>
+
+                    <!-- ===== Images ===== -->
+                    <div class="col-lg-8">
+                        <div class="partners-logos">
+                            <img src="assets/images/footer/1.jpg">
+                            <img src="assets/images/footer/2.jpg">
+                            <img src="assets/images/footer/3.jpg">
+                            <img src="assets/images/footer/4.jpg">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Bottom Bar ===== -->
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة لمنصة موسى أكاديمي 2018-2026</p>
+
+            <div class="payment-logos">
+                <img src="assets/images/payments/visa.png">
+                <img src="assets/images/payments/card.png">
+                <img src="assets/images/payments/mada.png" style="width: 100px; height: 50px;">
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/scripts.js"></script>
+
+</body>
+
+</html>
