@@ -269,6 +269,59 @@ $(document).ready(function () {
         slider.addEventListener('touchend', stopDrag);
     });
 
+    const reviews = {
+        "1.jpg": "منصة موسى ساعدتني جدًا في فهم المواد بطريقة بسيطة وسهلة ❤️",
+        "2.jpg": "أفضل منصة تعليمية جربتها.",
+        "3.jpg": "الدروس منظمة وسهلة الفهم.",
+        "4.jpg": "وفرت علي وقت كبير جدًا.",
+        "5.jpg": "تجربة ممتازة وأنصح بها.",
+        "6.jpg": "شرح احترافي وسلس.",
+        "7.jpg": "ساعدتني أحقق درجات عالية.",
+        "8.jpg": "من أفضل المنصات التعليمية."
+    };
+
+    function changeReview(el) {
+        const src = el.getAttribute("src");
+        const fileName = src.split('/').pop();
+
+        document.getElementById("mainImage").src = src;
+        document.getElementById("reviewText").innerText = reviews[fileName];
+    }
+
+    const counters = document.querySelectorAll('.counter');
+
+    const startCounter = (counter) => {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+
+        const update = () => {
+            const increment = target / 100;
+
+            if (count < target) {
+                count += increment;
+                counter.innerText = Math.ceil(count).toLocaleString();
+                setTimeout(update, 20);
+            } else {
+                counter.innerText = "+" + target.toLocaleString();
+            }
+        };
+
+        update();
+    };
+
+    // Run when visible (optional تحسين)
+    let started = false;
+
+    window.addEventListener('scroll', () => {
+        const section = document.querySelector('.counters');
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if (!started && sectionTop < window.innerHeight) {
+            counters.forEach(startCounter);
+            started = true;
+        }
+    });
+
 
 
 

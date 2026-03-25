@@ -1199,3 +1199,204 @@ body {
         font-size:14px;
     }
 }
+
+/* ===== Wrapper ===== */
+.reviews-wrapper{
+    position:relative;
+    max-width:500px;
+    margin:auto;
+}
+
+/* ===== Center Card ===== */
+.review-card{
+    position:relative;
+    z-index:2;
+}
+
+/* ===== Main Image ===== */
+.main-student{
+    width:140px;
+    height:140px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #eef2f3;
+    margin-bottom:15px;
+}
+
+/* ===== Text ===== */
+.review-card p{
+    font-size:15px;
+    color:#444;
+    line-height:1.7;
+    margin:15px 0;
+}
+
+.review-name{
+    color:cadetblue;
+    font-weight:600;
+}
+
+/* ===== Avatars Container ===== */
+.avatars{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+/* ===== Avatar ===== */
+.avatar{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    object-fit:cover;
+    position:absolute;
+    cursor:pointer;
+    transition:.3s;
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Hover */
+.avatar:hover{
+    transform: scale(1.2);
+}
+
+/* ===== Positions (circle style) ===== */
+.a1{ top:-20px; right: 45em; }
+.a2{ top:20%; right:55em; }
+.a3{ top:65%; right:45em; }
+.a4{ top:12em; right:55em; }
+.a5{ top:25%; left:55em; }
+.a6{ top:65%; left:45em; }
+.a7{ bottom:-10px; left:55em; }
+.a8{ top:-20px; left:45em; }
+.a9{ top: 55px;right: 35em; }
+.a10{ top: 190px;right: 35em; }
+.a11{ top: 4em;left: 35em; }
+.a12{ top: 11em;left: 35em; }
+
+/* ===== Floating Animation ===== */
+@keyframes float{
+    0%{ transform: translateY(0px); }
+    50%{ transform: translateY(-10px); }
+    100%{ transform: translateY(0px); }
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+    .avatar{
+        width:45px;
+        height:45px;
+    }
+
+    .main-student{
+        width:110px;
+        height:110px;
+    }
+}
+
+/* ===== Counter Box ===== */
+.counter-box{
+    background:#fff;
+    padding:25px 15px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:.3s;
+}
+
+/* Hover */
+.counter-box:hover{
+    transform: translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* ===== Numbers ===== */
+.counter{
+    font-size:28px;
+    font-weight:700;
+    color:cadetblue;
+    margin-bottom:10px;
+}
+
+/* ===== Text ===== */
+.counter-box p{
+    font-size:14px;
+    color:#555;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+    .counter{
+        font-size:24px;
+    }
+}
+
+/* ===== Download Section ===== */
+.download-section {
+    padding: 60px 0;
+}
+
+.download-section h1 span {
+    color: #28a745;
+}
+
+.mobile-image {
+    margin: 30px 0;
+}
+
+.mobile-image img {
+    width: 260px;
+    max-width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.mobile-image img:hover {
+    transform: translateY(-8px);
+}
+
+/* Text */
+.download-text {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.download-text span {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Store Buttons */
+.store-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.store-buttons a img {
+    width: 180px;
+    transition: 0.3s;
+}
+
+.store-buttons a img:hover {
+    transform: scale(1.05);
+}
+
+/* FAQ */
+.faq-text {
+    font-size: 15px;
+    color: #777;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .mobile-image img {
+        width: 200px;
+    }
+
+    .store-buttons a img {
+        width: 150px;
+    }
+}
