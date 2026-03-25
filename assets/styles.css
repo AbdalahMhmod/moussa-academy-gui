@@ -1296,6 +1296,18 @@ body {
     }
 }
 
+/* افتراضي (Desktop) */
+#review-container{
+    display:block;
+}
+
+/* موبايل */
+@media(max-width:768px){
+    #review-container{
+        display:none;
+    }
+}
+
 /* ===== Counter Box ===== */
 .counter-box{
     background:#fff;
@@ -1367,37 +1379,171 @@ body {
     font-weight: bold;
 }
 
-/* Store Buttons */
-.store-buttons {
+/* ===== Store Buttons Wrapper ===== */
+.store-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+/* ===== Button Style ===== */
+.store-buttons a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    min-width:180px;
+    height:60px;
+
+    border:2px solid cadetblue;
+    border-radius:12px;
+
+    color:cadetblue;
+    text-decoration:none;
+
+    font-size:16px;
+    font-weight:600;
+
+    transition: all .3s ease;
+}
+
+/* ===== Icons ===== */
+.store-buttons a i{
+    font-size:22px;
+}
+
+/* ===== Hover Effect 🔥 ===== */
+.store-buttons a:hover{
+    background:cadetblue;
+    color:#fff;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* ===== Active (click feel) ===== */
+.store-buttons a:active{
+    transform:scale(0.96);
+}
+
+/* ===== Mobile Responsive ===== */
+@media(max-width:768px){
+
+    .store-buttons a{
+        width:100%;
+        max-width:280px;
+        height:55px;
+        font-size:14px;
+    }
+
+}
+
+
+/* ===== CTA Section ===== */
+.cta-section {
+    background: #f7f9fc;
+    padding: 60px 20px;
+    border-radius: 20px;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+/* subtle pattern effect */
+.cta-section::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+    background-size: 10px 10px;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+/* ===== Title ===== */
+.cta-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 30px;
+    color: #444;
+}
+
+/* colored words */
+.cta-section .primary {
+    color: #6f42c1; /* purple */
+}
+
+.cta-section .secondary {
+    color: #20c997; /* green */
+}
+
+/* ===== Buttons Wrapper ===== */
+.cta-buttons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     flex-wrap: wrap;
 }
 
-.store-buttons a img {
-    width: 180px;
-    transition: 0.3s;
+/* ===== Primary Button ===== */
+.btn-primary {
+    background: #20c997;
+    color: #fff;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(32, 201, 151, 0.3);
 }
 
-.store-buttons a img:hover {
-    transform: scale(1.05);
+.btn-primary:hover {
+    background: #17a589;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(32, 201, 151, 0.5);
 }
 
-/* FAQ */
-.faq-text {
-    font-size: 15px;
-    color: #777;
+/* ===== Outline Button ===== */
+.btn-outline {
+    border: 2px solid #6f42c1;
+    color: #6f42c1;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background: #6f42c1;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(111, 66, 193, 0.4);
 }
 
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
-    .mobile-image img {
-        width: 200px;
+
+    .cta-section h2 {
+        font-size: 24px;
     }
 
-    .store-buttons a img {
-        width: 150px;
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        max-width: 280px;
     }
 }
-
