@@ -1495,8 +1495,8 @@ body {
     flex-wrap: wrap;
 }
 
-/* ===== Primary Button ===== */
-.btn-primary {
+/* ===== Join Primary Button ===== */
+.join-btn-primary {
     background: #20c997;
     color: #fff;
     padding: 14px 30px;
@@ -1508,14 +1508,14 @@ body {
     box-shadow: 0 5px 15px rgba(32, 201, 151, 0.3);
 }
 
-.btn-primary:hover {
+.join-btn-primary:hover {
     background: #17a589;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(32, 201, 151, 0.5);
 }
 
-/* ===== Outline Button ===== */
-.btn-outline {
+/* ===== FQA Outline Button ===== */
+.FQA-btn-outline {
     border: 2px solid #6f42c1;
     color: #6f42c1;
     padding: 12px 30px;
@@ -1527,7 +1527,7 @@ body {
     background: transparent;
 }
 
-.btn-outline:hover {
+.FQA-btn-outline:hover {
     background: #6f42c1;
     color: #fff;
     transform: translateY(-3px);
@@ -1541,8 +1541,8 @@ body {
         font-size: 24px;
     }
 
-    .btn-primary,
-    .btn-outline {
+    .join-btn-primary,
+    .FQA-btn-outline {
         width: 100%;
         max-width: 280px;
     }
