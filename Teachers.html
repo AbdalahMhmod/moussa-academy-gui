@@ -95,23 +95,64 @@
     </nav>
     <div class="page-content">
         <div class="container download-section">
-            <div class="cta-section text-center" style="background-image: url('assets/images/pattern/05.png');">
+            <div class="section cta-section text-center filters-section"
+                style="background-image: url('assets/images/pattern/05.png');">
                 <h2>
-                    جامعات <span class="primary">أكاديمية موسى</span><br>
+                    معلمين ومعلمات <span class="primary">أكاديمية موسى</span><br>
                 </h2>
                 <p>الكفاءة الخبرة و ذوو الشهادات العليا</p>
                 <form id="filterForm">
-                    <div class="row g-2">
+                    <!-- First row: Search + Sort -->
+                    <div class="row g-2 align-items-center mb-3">
                         <!-- Search -->
-                        <div class="col-md-5 col-12">
+                        <div class="col-md-6 col-12">
                             <input type="text" id="searchInput" class="form-control form-control-lg"
                                 placeholder="ابحث عن جامعة...">
                         </div>
-                        <!-- Type -->
-                        <div class="col-md-1 col-6">
-                            <button type="reset" class="btn btn-outline-secondary w-100 h-100">
-                                <i class="bi bi-search"></i>
-                            </button>
+                        <!-- Search/Reset Button -->
+                        <div class="col-md-1 col-12 d-flex">
+                            <button type="submit" class="btn btn-outline-primary w-100 me-2"><i class="bi bi-search"></i></button>
+                        </div>
+                        <div class="col-md-3 col-12"></div>
+                        <!-- Sort Dropdown -->
+                        <div class="col-md-2 col-12">
+                            <select class="form-select form-select-lg" id="sortSelect">
+                                <option value="">ترتيب حسب</option>
+                                <option value="alpha-asc">أ - ي</option>
+                                <option value="alpha-desc">ي - أ</option>
+                                <option value="price-asc">السعر الاقل</option>
+                                <option value="price-desc">السعر الاعلى</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Second row: Instructors + Universities + Apply -->
+                    <div class="row g-2 align-items-center mb-3">
+                        <div class="col-md-2 col-12">
+                            <select class="form-select form-select-lg selector" id="teacherSelect">
+                                <option value="">المستوى</option>
+                                <option value="instructor1">م. رائد توفيق</option>
+                                <option value="instructor2">م. أحمد علي</option>
+                                <!-- Add more instructors here -->
+                            </select>
+                        </div>
+                        <div class="col-md-2 col-12">
+                            <select class="form-select form-select-lg selector" id="teacherSelect">
+                                <option value="">الدرجة العلمية</option>
+                                <option value="uni1">جامعة الإمام</option>
+                                <option value="uni2">جامعة القاهرة</option>
+                                <!-- Add more universities here -->
+                            </select>
+                        </div>
+                        <div class="col-md-2 col-12">
+                            <button type="submit" class="btn btn-outline-warning w-100 me-2">الاكثر شهرة</button>
+                        </div>
+                        <div class="col-md-1 col-12 d-flex">
+                            <button type="submit" class="btn btn-outline-success w-100 me-2"><i class="bi bi-funnel"></i></button>
+                        </div>
+
+                        <div class="col-md-4 col-12"></div>
+                        <div class="col-md-1 col-12 d-flex">
+                            <button type="submit" class="btn btn-outline-danger w-100 me-2">اعادة تعيين</i></button>
                         </div>
                     </div>
                 </form>
@@ -119,127 +160,77 @@
            
         </div>
         <div class="container">
-            <div class="universities-list find-university-page" id="universitiesContainer">
-                <div class="university-grid">
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+            <div class="universities-list find-teacher-page" id="universitiesContainer">
+                <div class="teacher-grid">
+                    <a href="#" class="teacher-link">
+                        <div class="teacher-card">
+                            <div class="teacher-img">
+                                <img src="assets/images/gifs/profile.gif" alt="">
                             </div>
-                            <h4>جامعة القاهرة</h4>
+                            <h4>د. عبدالله محمود</h4> <br>
+                            <p> ماجستير في هندسة الحاسوب - الاردن</p>
                         </div>
                     </a>
 
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+                    <a href="#" class="teacher-link">
+                        <div class="teacher-card">
+                            <div class="teacher-img">
+                                <img src="assets/images/gifs/profile.gif" alt="">
                             </div>
-                            <h4>جامعة القاهرة</h4>
+                            <h4>د. عبدالله محمود</h4> <br>
+                            <p> ماجستير في هندسة الحاسوب - الاردن</p>
                         </div>
                     </a>
 
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+                    <a href="#" class="teacher-link">
+                        <div class="teacher-card">
+                            <div class="teacher-img">
+                                <img src="assets/images/gifs/profile.gif" alt="">
                             </div>
-                            <h4>جامعة القاهرة</h4>
+                            <h4>د. عبدالله محمود</h4> <br>
+                            <p> ماجستير في هندسة الحاسوب - الاردن</p>
                         </div>
                     </a>
 
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+                    <a href="#" class="teacher-link">
+                        <div class="teacher-card">
+                            <div class="teacher-img">
+                                <img src="assets/images/gifs/profile.gif" alt="">
                             </div>
-                            <h4>جامعة القاهرة</h4>
+                            <h4>د. عبدالله محمود</h4> <br>
+                            <p> ماجستير في هندسة الحاسوب - الاردن</p>
                         </div>
                     </a>
 
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+                    <a href="#" class="teacher-link">
+                        <div class="teacher-card">
+                            <div class="teacher-img">
+                                <img src="assets/images/gifs/profile.gif" alt="">
                             </div>
-                            <h4>جامعة القاهرة</h4>
+                            <h4>د. عبدالله محمود</h4> <br>
+                            <p> ماجستير في هندسة الحاسوب - الاردن</p>
                         </div>
                     </a>
 
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+                    <a href="#" class="teacher-link">
+                        <div class="teacher-card">
+                            <div class="teacher-img">
+                                <img src="assets/images/gifs/profile.gif" alt="">
                             </div>
-                            <h4>جامعة القاهرة</h4>
+                            <h4>د. عبدالله محمود</h4> <br>
+                            <p> ماجستير في هندسة الحاسوب - الاردن</p>
                         </div>
                     </a>
 
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+                    <a href="#" class="teacher-link">
+                        <div class="teacher-card">
+                            <div class="teacher-img">
+                                <img src="assets/images/gifs/profile.gif" alt="">
                             </div>
-                            <h4>جامعة القاهرة</h4>
+                            <h4>د. عبدالله محمود</h4> <br>
+                            <p> ماجستير في هندسة الحاسوب - الاردن</p>
                         </div>
                     </a>
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
-                            </div>
-                            <h4>جامعة القاهرة</h4>
-                        </div>
-                    </a>
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
-                            </div>
-                            <h4>جامعة القاهرة</h4>
-                        </div>
-                    </a>
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
-                            </div>
-                            <h4>جامعة القاهرة</h4>
-                        </div>
-                    </a>
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
-                            </div>
-                            <h4>جامعة القاهرة</h4>
-                        </div>
-                    </a>
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
-                            </div>
-                            <h4>جامعة القاهرة</h4>
-                        </div>
-                    </a>
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
-                            </div>
-                            <h4>جامعة القاهرة</h4>
-                        </div>
-                    </a>
-
-
                 </div>
             </div>
         </div>

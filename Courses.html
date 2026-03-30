@@ -16,7 +16,7 @@
 
 <body>
 
-<!-- Top Offer -->
+    <!-- Top Offer -->
     <div class="top-offer" id="top__nav">
         <div class="container">
             <div class="top-offer__container">
@@ -93,151 +93,313 @@
             </div>
         </div>
     </nav>
+
     <div class="page-content">
         <div class="container download-section">
-            <div class="cta-section text-center" style="background-image: url('assets/images/pattern/05.png');">
+            <div class="section cta-section text-center filters-section"
+                style="background-image: url('assets/images/pattern/05.png');">
                 <h2>
-                    جامعات <span class="primary">أكاديمية موسى</span><br>
+                    المقررات <span class="primary">الجامعية</span><br>
                 </h2>
-                <p>الكفاءة الخبرة و ذوو الشهادات العليا</p>
+                <p>يمكنك التواصل مع الادارة في حال اردت مقرر جديد للتواصل <a href="#">اضغط هنا</a></p>
+
                 <form id="filterForm">
-                    <div class="row g-2">
+                    <!-- First row: Search + Sort -->
+                    <div class="row g-2 align-items-center mb-3">
                         <!-- Search -->
-                        <div class="col-md-5 col-12">
+                        <div class="col-md-4 col-12">
                             <input type="text" id="searchInput" class="form-control form-control-lg"
                                 placeholder="ابحث عن جامعة...">
                         </div>
-                        <!-- Type -->
-                        <div class="col-md-1 col-6">
-                            <button type="reset" class="btn btn-outline-secondary w-100 h-100">
-                                <i class="bi bi-search"></i>
-                            </button>
+                        <!-- Search/Reset Button -->
+                        <div class="col-md-1 col-12 d-flex">
+                            <button type="submit" class="btn btn-outline-primary w-100 me-2"><i class="bi bi-search"></i></button>
+                        </div>
+                        <div class="col-md-5 col-12"></div>
+                        <!-- Sort Dropdown -->
+                        <div class="col-md-2 col-12">
+                            <select class="form-select form-select-lg" id="sortSelect">
+                                <option value="">ترتيب حسب</option>
+                                <option value="alpha-asc">أ - ي</option>
+                                <option value="alpha-desc">ي - أ</option>
+                                <option value="price-asc">السعر الاقل</option>
+                                <option value="price-desc">السعر الاعلى</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- Second row: Instructors + Universities + Apply -->
+                    <div class="row g-2 align-items-center mb-3">
+                        <div class="col-md-2 col-12">
+                            <select class="form-select form-select-lg" id="instructorSelect">
+                                <option value="">إختر المحاضر</option>
+                                <option value="instructor1">م. رائد توفيق</option>
+                                <option value="instructor2">م. أحمد علي</option>
+                                <!-- Add more instructors here -->
+                            </select>
+                        </div>
+                        <div class="col-md-2 col-12">
+                            <select class="form-select form-select-lg" id="universitySelect">
+                                <option value="">إختر الجامعة / الكلية</option>
+                                <option value="uni1">جامعة الإمام</option>
+                                <option value="uni2">جامعة القاهرة</option>
+                                <!-- Add more universities here -->
+                            </select>
+                        </div>
+                        <div class="col-md-1 col-12 d-flex">
+                            <button type="submit" class="btn btn-outline-success w-100 me-2"><i class="bi bi-funnel"></i></button>
                         </div>
                     </div>
                 </form>
             </div>
-           
         </div>
         <div class="container">
-            <div class="universities-list find-university-page" id="universitiesContainer">
-                <div class="university-grid">
+            <div class="courses-list find-courses-page" id="universitiesContainer">
+                <div class="courses-grid">
 
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+                    <div class="course course-card">
+                        <div class="card-head position-relative">
+                            <img src="assets/images/courses/online-education.png" class="img-fluid rounded w-100"
+                                style="height:213px;object-fit:cover;">
+                            <div class="head-overlay d-flex justify-content-center align-items-center">
+                                <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                <a href="#" class="detail-icon"><img src="assets/images/university/youtube.png"></a>
                             </div>
-                            <h4>جامعة القاهرة</h4>
                         </div>
-                    </a>
+                        <div class="card-center mt-2">
+                            <div class="title">
+                                <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                    preserveAspectRatio="none">
+                                    <path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card-content mt-2">
+                            <div class="course-details d-flex flex-column gap-2">
+                                <div class="detail teacher-name">
+                                    <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                        رائد توفيق</a>
+                                </div>
+                                <div class="detail college">
+                                    <img class="card-img" src="assets/images/gifs/online-learning.gif"><a href="#">جامعة
+                                        الإمام
+                                        || كلية الحاسب</a>
+                                </div>
+                                <div class="detail lectures-count">
+                                    <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                        محاضرة</span>
+                                </div>
+                                <div class="detail telegram-link">
+                                    <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                        مجموعة التليقرام</a>
+                                </div>
+                            </div>
+                            <div
+                                class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                <div class="price d-flex align-items-center gap-2">
+                                    <span class="discount-price">350 ⃁</span>
+                                    <span class="price-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+                    <div class="course course-card">
+                        <div class="card-head position-relative">
+                            <img src="assets/images/courses/online-education.png" class="img-fluid rounded w-100"
+                                style="height:213px;object-fit:cover;">
+                            <div class="head-overlay d-flex justify-content-center align-items-center">
+                                <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                <a href="#" class="detail-icon"><img src="assets/images/university/youtube.png"></a>
                             </div>
-                            <h4>جامعة القاهرة</h4>
                         </div>
-                    </a>
+                        <div class="card-center mt-2">
+                            <div class="title">
+                                <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                    preserveAspectRatio="none">
+                                    <path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card-content mt-2">
+                            <div class="course-details d-flex flex-column gap-2">
+                                <div class="detail teacher-name">
+                                    <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                        رائد توفيق</a>
+                                </div>
+                                <div class="detail college">
+                                    <img class="card-img" src="assets/images/gifs/online-learning.gif"><a href="#">جامعة
+                                        الإمام
+                                        || كلية الحاسب</a>
+                                </div>
+                                <div class="detail lectures-count">
+                                    <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                        محاضرة</span>
+                                </div>
+                                <div class="detail telegram-link">
+                                    <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                        مجموعة التليقرام</a>
+                                </div>
+                            </div>
+                            <div
+                                class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                <div class="price d-flex align-items-center gap-2">
+                                    <span class="discount-price">350 ⃁</span>
+                                    <span class="price-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+                    <div class="course course-card">
+                        <div class="card-head position-relative">
+                            <img src="assets/images/courses/online-education.png" class="img-fluid rounded w-100"
+                                style="height:213px;object-fit:cover;">
+                            <div class="head-overlay d-flex justify-content-center align-items-center">
+                                <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                <a href="#" class="detail-icon"><img src="assets/images/university/youtube.png"></a>
                             </div>
-                            <h4>جامعة القاهرة</h4>
                         </div>
-                    </a>
+                        <div class="card-center mt-2">
+                            <div class="title">
+                                <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                    preserveAspectRatio="none">
+                                    <path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card-content mt-2">
+                            <div class="course-details d-flex flex-column gap-2">
+                                <div class="detail teacher-name">
+                                    <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                        رائد توفيق</a>
+                                </div>
+                                <div class="detail college">
+                                    <img class="card-img" src="assets/images/gifs/online-learning.gif"><a href="#">جامعة
+                                        الإمام
+                                        || كلية الحاسب</a>
+                                </div>
+                                <div class="detail lectures-count">
+                                    <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                        محاضرة</span>
+                                </div>
+                                <div class="detail telegram-link">
+                                    <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                        مجموعة التليقرام</a>
+                                </div>
+                            </div>
+                            <div
+                                class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                <div class="price d-flex align-items-center gap-2">
+                                    <span class="discount-price">350 ⃁</span>
+                                    <span class="price-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+                    <div class="course course-card">
+                        <div class="card-head position-relative">
+                            <img src="assets/images/courses/online-education.png" class="img-fluid rounded w-100"
+                                style="height:213px;object-fit:cover;">
+                            <div class="head-overlay d-flex justify-content-center align-items-center">
+                                <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                <a href="#" class="detail-icon"><img src="assets/images/university/youtube.png"></a>
                             </div>
-                            <h4>جامعة القاهرة</h4>
                         </div>
-                    </a>
+                        <div class="card-center mt-2">
+                            <div class="title">
+                                <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                    preserveAspectRatio="none">
+                                    <path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="card-content mt-2">
+                            <div class="course-details d-flex flex-column gap-2">
+                                <div class="detail teacher-name">
+                                    <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                        رائد توفيق</a>
+                                </div>
+                                <div class="detail college">
+                                    <img class="card-img" src="assets/images/gifs/online-learning.gif"><a href="#">جامعة
+                                        الإمام
+                                        || كلية الحاسب</a>
+                                </div>
+                                <div class="detail lectures-count">
+                                    <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                        محاضرة</span>
+                                </div>
+                                <div class="detail telegram-link">
+                                    <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                        مجموعة التليقرام</a>
+                                </div>
+                            </div>
+                            <div
+                                class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                <div class="price d-flex align-items-center gap-2">
+                                    <span class="discount-price">350 ⃁</span>
+                                    <span class="price-dot"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+                    <div class="course course-card">
+                        <div class="card-head position-relative">
+                            <img src="assets/images/courses/online-education.png" class="img-fluid rounded w-100"
+                                style="height:213px;object-fit:cover;">
+                            <div class="head-overlay d-flex justify-content-center align-items-center">
+                                <a href="#" class="detail-icon"><img src="assets/images/university/eye.png"></a>
+                                <a href="#" class="detail-icon"><img src="assets/images/university/youtube.png"></a>
                             </div>
-                            <h4>جامعة القاهرة</h4>
                         </div>
-                    </a>
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+                        <div class="card-center mt-2">
+                            <div class="title">
+                                <a class="title-text" href="#">المترجمات - علوم الحاسب</a>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150"
+                                    preserveAspectRatio="none">
+                                    <path d="M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7" />
+                                </svg>
                             </div>
-                            <h4>جامعة القاهرة</h4>
                         </div>
-                    </a>
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+                        <div class="card-content mt-2">
+                            <div class="course-details d-flex flex-column gap-2">
+                                <div class="detail teacher-name">
+                                    <img class="card-img" src="assets/images/gifs/profile.gif"><a href="#">م.
+                                        رائد توفيق</a>
+                                </div>
+                                <div class="detail college">
+                                    <img class="card-img" src="assets/images/gifs/online-learning.gif"><a href="#">جامعة
+                                        الإمام
+                                        || كلية الحاسب</a>
+                                </div>
+                                <div class="detail lectures-count">
+                                    <img class="card-img" src="assets/images/gifs/video-player.gif"><span>117
+                                        محاضرة</span>
+                                </div>
+                                <div class="detail telegram-link">
+                                    <img class="card-img" src="assets/images/gifs/telegram.png"><a href="#">رابط
+                                        مجموعة التليقرام</a>
+                                </div>
                             </div>
-                            <h4>جامعة القاهرة</h4>
-                        </div>
-                    </a>
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
+                            <div
+                                class="start-now-price d-flex align-items-center justify-content-between px-2 mt-3 mb-3">
+                                <a href="#" class="btn btn-primary">إشترك الآن</a>
+                                <div class="price d-flex align-items-center gap-2">
+                                    <span class="discount-price">350 ⃁</span>
+                                    <span class="price-dot"></span>
+                                </div>
                             </div>
-                            <h4>جامعة القاهرة</h4>
                         </div>
-                    </a>
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
-                            </div>
-                            <h4>جامعة القاهرة</h4>
-                        </div>
-                    </a>
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
-                            </div>
-                            <h4>جامعة القاهرة</h4>
-                        </div>
-                    </a>
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
-                            </div>
-                            <h4>جامعة القاهرة</h4>
-                        </div>
-                    </a>
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
-                            </div>
-                            <h4>جامعة القاهرة</h4>
-                        </div>
-                    </a>
-
-                    <a href="#" class="university-link">
-                        <div class="university-card">
-                            <div class="university-img">
-                                <img src="assets/images/university/education.png" alt="">
-                            </div>
-                            <h4>جامعة القاهرة</h4>
-                        </div>
-                    </a>
+                    </div>
 
 
                 </div>
