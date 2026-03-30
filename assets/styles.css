@@ -7,7 +7,7 @@ body {
     font-family: 'Cairo', sans-serif;
     margin: 0;
 }
-
+.page-content{margin-bottom: 30px;}
 .section h1 { color: #0d6efd; font-weight:700; margin-bottom:15px; }
 .section h1 span { color: cadetblue; }
 .section p { color:#000; font-size:16px; line-height:1.6; }
@@ -1549,3 +1549,107 @@ body {
 }
 
 /* test */
+.university-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 60px; /* المسافة بين الكروت */
+}
+
+/* الكارت */
+.university-card {
+    position: relative;
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px 90px 25px 20px;
+    min-height: 110px; /* زودنا الارتفاع */
+    
+    display: flex;
+    align-items: center;
+
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    overflow: visible;
+}
+.university-link{
+    text-decoration: none;
+}
+/* الصورة */
+.university-img {
+    position: absolute;
+    right: -35px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: #f5f5f5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.university-img img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+}
+
+/* النص */
+.university-card h4 {
+    font-size: 15px;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+    transition: 0.3s;
+}
+
+/* Hover */
+.university-card:hover {
+    background: linear-gradient(135deg, #6f42c1, #6f42c1);
+}
+
+.university-card:hover h4 {
+    color: #fff;
+}
+
+/* Active */
+.university-card.active {
+    background: linear-gradient(135deg, #6f42c1, #6f42c1);
+}
+
+.university-card.active h4 {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+
+    .university-grid {
+        grid-template-columns: 1fr; /* كارت واحد في الصف */
+        gap: 20px; /* ثابتة زي ما طلبت */
+        padding: 30px;
+    }
+
+    .university-card {
+        padding: 20px 80px 20px 15px;
+        min-height: 100px;
+    }
+
+    .university-img {
+        width: 65px;
+        height: 65px;
+        right: -30px;
+    }
+
+    .university-img img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .university-card h4 {
+        font-size: 14px;
+    }
+}
