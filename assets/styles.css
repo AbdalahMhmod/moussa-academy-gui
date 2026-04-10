@@ -1802,7 +1802,6 @@ body {
     }
 }
 
-/* HERO */
 .course-hero {
     position: relative;
     height: 700px;
@@ -1816,7 +1815,6 @@ body {
     object-fit: cover;
 }
 
-/* PLAY */
 .play-btn {
     position: absolute;
     top: 50%;
@@ -1827,9 +1825,13 @@ body {
     color: #fff;
     padding: 12px 18px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
-/* OVERLAY */
+/* =========================================
+   OVERLAY (DESKTOP)
+========================================= */
+
 .course-overlay {
     position: absolute;
     bottom: -35px;
@@ -1846,10 +1848,10 @@ body {
     align-items: center;
 
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    z-index: 2;
     height: 150px;
 }
 
-/* RIGHT */
 .overlay-right {
     display: flex;
     align-items: center;
@@ -1862,14 +1864,13 @@ body {
     border-radius: 50%;
 }
 
-/* CENTER */
 .overlay-center {
     display: flex;
     gap: 20px;
     color: #666;
+    flex-wrap: wrap;
 }
 
-/* LEFT */
 .overlay-left {
     display: flex;
     align-items: center;
@@ -1882,10 +1883,7 @@ body {
     border: none;
     padding: 8px 12px;
     border-radius: 6px;
-}
-
-.price {
-    font-weight: bold;
+    cursor: pointer;
 }
 
 .library-btn {
@@ -1896,12 +1894,22 @@ body {
     border-radius: 6px;
 }
 
-/* CONTENT */
+.price {
+    font-weight: bold;
+}
+
+/* =========================================
+   CONTENT SECTION
+========================================= */
+
 .course-content-section {
     margin-top: 70px;
 }
 
-/* TABS */
+/* =========================================
+   TABS
+========================================= */
+
 .tabs {
     display: flex;
     align-items: center;
@@ -1914,6 +1922,7 @@ body {
     background: none;
     padding: 10px;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .tab.active {
@@ -1921,7 +1930,6 @@ body {
     font-weight: bold;
 }
 
-/* STATS */
 .course-stats {
     margin-left: auto;
     display: flex;
@@ -1929,7 +1937,10 @@ body {
     color: #777;
 }
 
-/* LESSONS */
+/* =========================================
+   LESSONS
+========================================= */
+
 .lessons-list {
     margin-top: 20px;
 }
@@ -1953,4 +1964,252 @@ body {
 .plus {
     font-size: 20px;
     cursor: pointer;
+}
+
+/* =========================================
+   TABLET (<= 992px)
+========================================= */
+
+@media (max-width: 992px) {
+
+    .course-overlay {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .overlay-center {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .overlay-left {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .lesson-row {
+        grid-template-columns: 1.5fr 1fr 1fr auto;
+    }
+}
+
+/* =========================================
+   MOBILE (<= 768px)
+========================================= */
+
+@media (max-width: 768px) {
+
+    /* HERO */
+    .course-hero {
+        height: 220px;
+    }
+
+    .play-btn {
+        font-size: 24px;
+        padding: 10px 14px;
+    }
+
+    /* OVERLAY → CARD */
+    .course-overlay {
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 10px;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .overlay-right {
+        width: 100%;
+    }
+
+    .overlay-center {
+        width: 100%;
+        font-size: 14px;
+        gap: 10px;
+    }
+
+    .overlay-left {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .subscribe-btn,
+    .library-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* CONTENT */
+    .course-content-section {
+        margin-top: 20px;
+    }
+
+    /* TABS → SCROLL */
+    .tabs {
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 5px;
+    }
+
+    .tab {
+        flex: 0 0 auto;
+        font-size: 14px;
+    }
+
+    .course-stats {
+        display: none;
+    }
+
+    /* LESSONS → STACK */
+    .lesson-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        text-align: right;
+    }
+
+    .lesson-meta {
+        font-size: 13px;
+    }
+
+    .plus {
+        align-self: flex-end;
+    }
+}
+
+/* =========================================
+   SMALL MOBILE (<= 480px)
+========================================= */
+
+@media (max-width: 480px) {
+
+    .section {
+        padding: 10px;
+    }
+
+    .tab {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .lesson-title {
+        font-size: 14px;
+    }
+
+    .lesson-meta {
+        font-size: 12px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+}
+
+.course-content {
+    direction: rtl;
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.06);
+}
+
+.course-content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+}
+
+.course-content-links .tab {
+    background: none;
+    border: none;
+    margin-left: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.course-content-links .tab.active {
+    background: #007bff;
+    color: #fff;
+}
+
+.unit {
+    border: 1px solid #eee;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.unit-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background: #fafafa;
+    cursor: pointer;
+    gap: 10px;
+}
+
+.unit-right {
+    flex: 1;
+    text-align: right;
+    font-weight: 600;
+}
+
+.unit-left {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 13px;
+    color: #666;
+    min-width: 120px;
+}
+
+.toggle {
+    font-size: 18px;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.unit-body {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease;
+}
+
+.unit.active .toggle {
+    transform: rotate(180deg);
+}
+
+.lesson {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border-top: 1px solid #eee;
+}
+
+.lesson-right {
+    flex: 1;
+    text-align: right;
+}
+
+.lesson-left {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 14px;
+    color: #777;
+    min-width: 85px;
+}
+
+.lesson-title{
+    text-decoration: none;
 }
