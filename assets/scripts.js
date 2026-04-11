@@ -323,33 +323,54 @@ $(document).ready(function () {
     });
 
     document.querySelectorAll('.unit').forEach(unit => {
-    const body = unit.querySelector('.unit-body');
-    if (unit.classList.contains('active')) {
-        body.style.height = body.scrollHeight + 'px';
-    }
-});
-
-document.querySelectorAll('.unit-header').forEach(header => {
-    header.addEventListener('click', () => {
-        const unit = header.parentElement;
         const body = unit.querySelector('.unit-body');
-
-        document.querySelectorAll('.unit').forEach(u => {
-            if (u !== unit) {
-                u.classList.remove('active');
-                u.querySelector('.unit-body').style.height = '0px';
-            }
-        });
-
         if (unit.classList.contains('active')) {
-            body.style.height = '0px';
-            unit.classList.remove('active');
-        } else {
-            unit.classList.add('active');
             body.style.height = body.scrollHeight + 'px';
         }
     });
-});
+
+    document.querySelectorAll('.unit-header').forEach(header => {
+        header.addEventListener('click', () => {
+            const unit = header.parentElement;
+            const body = unit.querySelector('.unit-body');
+
+            document.querySelectorAll('.unit').forEach(u => {
+                if (u !== unit) {
+                    u.classList.remove('active');
+                    u.querySelector('.unit-body').style.height = '0px';
+                }
+            });
+
+            if (unit.classList.contains('active')) {
+                body.style.height = '0px';
+                unit.classList.remove('active');
+            } else {
+                unit.classList.add('active');
+                body.style.height = body.scrollHeight + 'px';
+            }
+        });
+    });
+
+    document.querySelector("form").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const inputs = this.querySelectorAll("input, textarea");
+        let valid = true;
+
+        inputs.forEach(input => {
+            if (input.value.trim() === "") {
+                input.style.borderColor = "red";
+                valid = false;
+            } else {
+                input.style.borderColor = "#ddd";
+            }
+        });
+
+        if (valid) {
+            alert("تم إرسال الرسالة بنجاح ✅");
+            this.reset();
+        }
+    });
 
 
 
