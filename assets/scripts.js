@@ -371,7 +371,28 @@ $(document).ready(function () {
             this.reset();
         }
     });
+    function copyText(btn) {
 
+        const text = btn.parentElement.querySelector("strong").innerText;
+
+        // fallback (works everywhere)
+        const input = document.createElement("input");
+        input.value = text;
+        document.body.appendChild(input);
+
+        input.select();
+        document.execCommand("copy");
+
+        document.body.removeChild(input);
+
+        // UI feedback
+        const original = btn.innerText;
+        btn.innerText = "✔ تم النسخ";
+
+        setTimeout(() => {
+            btn.innerText = original;
+        }, 2000);
+    }
 
 
 
